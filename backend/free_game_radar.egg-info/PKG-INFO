@@ -1,0 +1,199 @@
+Metadata-Version: 2.4
+Name: free-game-radar
+Version: 0.1.0
+Summary: Monitors free PC game giveaways and Steam wishlist prices.
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi>=0.115
+Requires-Dist: uvicorn[standard]>=0.30
+Requires-Dist: pydantic>=2.7
+Requires-Dist: pydantic-settings>=2.7
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: httpx>=0.27; extra == "dev"
+Requires-Dist: ruff>=0.6; extra == "dev"
+Requires-Dist: mypy>=1.11; extra == "dev"
+Dynamic: license-file
+
+# 🎮 Free Game Radar
+
+**Never miss a free game. Never miss your wishlist's lowest price.**
+
+A cross-platform game giveaway and price tracking application
+that monitors free game promotions across multiple PC game stores,
+tracks Steam wishlist discounts, and sends real-time notifications.
+
+![Python](https://img.shields.io/badge/Python-3.12+-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688)
+![Flutter](https://img.shields.io/badge/Flutter-Cross--Platform-02569B)
+![Status](https://img.shields.io/badge/Status-In%20Development-orange)
+
+## 📖 Overview
+
+Free Game Radar is a personal project designed to help gamers
+keep track of free PC games and game discounts across multiple
+digital storefronts.
+
+The application automatically monitors supported game stores,
+detects new giveaways, tracks promotion expiration times,
+and sends notifications before free offers expire.
+
+It also includes a Steam wishlist monitoring system that tracks
+price changes, historical prices, discounts, and target prices.
+
+## ✨ Features
+
+### 🎁 Free Game Monitoring
+- Multi-platform giveaway monitoring.
+- Free-to-keep detection.
+- Free weekend detection.
+- Promotion expiration tracking.
+
+### ⏳ Giveaway Countdown
+- Real-time countdown.
+- Configurable expiration reminders.
+- Automatic expiration detection.
+
+### ❤️ Steam Wishlist
+- Steam wishlist integration where accessible.
+- Manual game addition.
+- Wishlist synchronization.
+
+### 📉 Steam Price Tracker
+- Current price monitoring.
+- Discount detection.
+- Historical price tracking.
+- Recorded lowest price detection.
+- Target price alerts.
+
+### 🔔 Notifications
+- New giveaway alerts.
+- Giveaway expiration reminders.
+- Wishlist discount alerts.
+- Price drop alerts.
+- Telegram notifications.
+
+## 🛒 Supported Platforms
+
+| Platform | Giveaway | Price Tracking | Status |
+|---|---|---|---|
+| Steam | Planned | Planned | Planned |
+| Epic Games Store | Planned | N/A | Planned |
+| GOG | Planned | N/A | Planned |
+| Ubisoft Connect | Planned | N/A | Planned |
+| Rockstar Games Launcher | Planned | N/A | Planned |
+| EA app | Planned | N/A | Planned |
+
+Platform availability depends on accessible and permitted data sources.
+
+<img width="1672" height="1356" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/e47a41aa-185d-43d8-b944-bc446b9378f0" />
+
+## 🛠️ Technology Stack
+
+### Backend
+- Python
+- FastAPI
+- SQLAlchemy
+- Pydantic
+- APScheduler
+
+### Database
+- SQLite
+- PostgreSQL
+
+### Frontend
+- Flutter
+- Dart
+
+### Notifications
+- Telegram Bot API
+- Firebase Cloud Messaging
+- Apple Push Notification service
+
+### Development
+- Git
+- GitHub
+- Docker
+- Pytest
+
+## ⚙️ Environment Variables
+
+| Variable | Description |
+|---|---|
+| DATABASE_URL | Database connection |
+| TELEGRAM_BOT_TOKEN | Telegram bot token |
+| TELEGRAM_CHAT_ID | Telegram destination |
+| GIVEAWAY_SCAN_INTERVAL_MINUTES | Giveaway scan interval |
+| PRICE_SCAN_INTERVAL_MINUTES | Price scan interval |
+| DEFAULT_TIMEZONE | Default user timezone |
+
+## 📂 Project Structure
+
+free-game-radar/
+├── backend/
+│   ├── api/
+│   ├── adapters/
+│   ├── services/
+│   ├── models/
+│   ├── repositories/
+│   ├── database/
+│   ├── scheduler/
+│   └── notifications/
+├── frontend/
+├── tests/
+├── docs/
+├── .github/
+├── Dockerfile
+├── docker-compose.yml
+├── .env.example
+├── README.md
+└── LICENSE
+
+## 🗺️ Roadmap
+
+- [ ] Project architecture and planning
+- [ ] Backend initialization
+- [ ] Database implementation
+- [ ] Steam giveaway monitoring
+- [ ] Epic Games giveaway monitoring
+- [ ] GOG giveaway monitoring
+- [ ] Ubisoft Connect integration
+- [ ] Rockstar Games integration
+- [ ] EA app integration
+- [ ] Giveaway countdown system
+- [ ] Telegram notifications
+- [ ] Steam wishlist integration
+- [ ] Steam price tracking
+- [ ] Historical price tracking
+- [ ] REST API
+- [ ] Flutter desktop application
+- [ ] Android application
+- [ ] iOS application
+- [ ] Docker deployment
+- [ ] Automated testing
+
+## ⚠️ Limitations
+
+- Platform integrations depend on available and permitted data sources.
+- Some stores may not expose public giveaway APIs.
+- Steam wishlist import may require a public profile.
+- Historical price accuracy depends on data availability.
+- Giveaway expiration times may change when updated by the store.
+- Push notifications require platform-specific configuration.
+
+## 📜 License
+
+This project is licensed under the PolyForm Noncommercial License 1.0.0.
+
+You may use, modify, and distribute this software under the terms and conditions of the license. Commercial use is not permitted unless separately authorized by the copyright holder.
+
+See the LICENSE file for the full license text.
+
+Copyright © 2026 Han Lie
+
+## 🤝 Contributing
+
+Contributions, bug reports, and feature suggestions are welcome.
+
+Please read CONTRIBUTING.md before submitting a pull request.
