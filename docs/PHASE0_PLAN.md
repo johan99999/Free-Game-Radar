@@ -257,7 +257,8 @@ All under an API-token dependency in MVP. Pagination via `limit`/`offset`; error
 ```python
 class PlatformAdapter(Protocol):
     platform: str
-    support_status: SupportStatus   # SUPPORTED | PARTIAL | UNSUPPORTED
+    support_status: SupportStatus  # SUPPORTED | PARTIAL | UNSUPPORTED
+
     async def fetch(self) -> list[RawPromotion]: ...
 ```
 

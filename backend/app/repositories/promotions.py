@@ -27,9 +27,7 @@ class PromotionData:
     source_url: str | None = None
 
 
-def make_dedupe_key(
-    source: str, promotion_type: PromotionType, start_date: datetime | None
-) -> str:
+def make_dedupe_key(source: str, promotion_type: PromotionType, start_date: datetime | None) -> str:
     """Identity of one promotion window. The end date is NOT part of it, so an extended
     giveaway updates the same row instead of creating a new one."""
     start = start_date.astimezone(UTC).strftime("%Y%m%dT%H%M%SZ") if start_date else "unknown"

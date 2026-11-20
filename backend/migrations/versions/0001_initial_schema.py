@@ -93,9 +93,7 @@ def upgrade() -> None:
         sa.PrimaryKeyConstraint("id", name=op.f("pk_promotions")),
         sa.UniqueConstraint("game_id", "dedupe_key", name=op.f("uq_promotions_game_dedupe")),
     )
-    op.create_index(
-        op.f("ix_promotions_status_end_date"), "promotions", ["status", "end_date"]
-    )
+    op.create_index(op.f("ix_promotions_status_end_date"), "promotions", ["status", "end_date"])
 
     op.create_table(
         "price_history",

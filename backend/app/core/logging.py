@@ -17,9 +17,7 @@ def configure_logging(level: str = "INFO") -> None:
                     "datefmt": "%Y-%m-%dT%H:%M:%S",
                 }
             },
-            "handlers": {
-                "console": {"class": "logging.StreamHandler", "formatter": "standard"}
-            },
+            "handlers": {"console": {"class": "logging.StreamHandler", "formatter": "standard"}},
             "root": {"level": level, "handlers": ["console"]},
         }
     )
