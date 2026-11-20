@@ -3,6 +3,14 @@ README.md
 pyproject.toml
 backend/app/__init__.py
 backend/app/main.py
+backend/app/adapters/__init__.py
+backend/app/adapters/base.py
+backend/app/adapters/gamerpower.py
+backend/app/adapters/http.py
+backend/app/adapters/models.py
+backend/app/adapters/registry.py
+backend/app/adapters/runner.py
+backend/app/adapters/validation.py
 backend/app/api/__init__.py
 backend/app/api/health.py
 backend/app/core/__init__.py
